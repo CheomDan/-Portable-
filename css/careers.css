@@ -1,0 +1,30 @@
+/*초기화*/
+*{
+    margin:0px;
+    padding:0px;
+    font-family: '맑은 고딕','Malgun Gothic','Gothic', sans-serif;
+}
+a{text-decoration: none;color: black;}
+li{list-style: none;}
+body{min-width: 1400px;}
+/* header 처리 */
+.header {width: 945px;margin:0 auto;position: relative;margin-bottom: 10px;}
+.logo li {float: left;}
+.logo h3 {position: absolute;line-height:100px;}
+.container {text-align: center;}
+.container::after {display: block;content:"";clear: both;}
+.nav ul li {float: right;padding: 5px 20px;}
+.nav ul li a {font-weight: 600;color:rgb(66, 66, 66);text-shadow: 0.5px 0 gray;text-decoration: none;}
+.nav ul li a:hover {color: rgb(212, 4, 4);}
+.nav {position: absolute;right: 0;top: 45px;}
+.section {width: 945px; margin: 0 auto;}
+/* subtitle 처리 */
+.subtitle {text-align: left;padding: 60px 0 15px 0;}
+.subtitle h1 {font-size: 1.3rem;color: rgb(17, 17, 17);font-weight: 900;}
+.subtitle p {font-size: 0.9rem; margin-bottom: 5px;}
+/* list */
+.table th {padding-left: 0;}
+.table td {padding: 17px 0;}
+.table tbody tr:last-child {text-decoration: line-through;}
+/*footer*/
+footer {height: 210px;margin-top:120px;}

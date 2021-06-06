@@ -1,0 +1,470 @@
+<html>
+    <head>
+        <title>Portable유통 - 제품목록</title>
+        <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0">
+        <meta property="og:title" content="Portable유통 - 제품목록"/>
+        <meta property="og:url" content="https://portablesales.kro.kr"/>
+        <meta property="og:image" content="https://firebasestorage.googleapis.com/v0/b/web-study-project-50c57.appspot.com/o/logo.png?alt=media&token=850bc38a-17e5-45c4-9762-0658ef8f2599"/>
+        <meta property="og:description" content="휴대용 전자기기 판매 전문!"/>
+        <meta property="og:article:author" content="(주)Portable유통"/>
+        <meta property="og:article:author:url" content="https://portablesales.kro.kr"/>
+        <link href="./css/main-header.css" rel="stylesheet">
+        <link href="./css/main-nav.css" rel="stylesheet">
+        <link href="./css/list.css" rel="stylesheet">
+        <script src="./js/list.js"></script>
+        <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+        <script>
+            $(document).ready(function () {
+                $('.outer-menu-item').hover(function () {
+                    $('#nav-line').css('margin-top','95px');
+                    $(this).find('.inner-menu').show();
+                }, function () {
+                    $('#nav-line').css('margin-top','10px');
+                    $(this).find('.inner-menu').hide();
+                });
+            });
+            /* lnb */
+            (function($){
+            
+            var lnbUI = {
+                click : function (target, speed) {
+                var _self = this,
+                    $target = $(target);
+                _self.speed = speed || 300;
+                
+                $target.each(function(){
+                    if(findChildren($(this))) {
+                    return;
+                    }
+                    $(this).addClass('noDepth');
+                });
+                function findChildren(obj) {
+                    return obj.find('> ul').length > 0;
+                }
+                $target.on('click','a', function(e){
+                    e.stopPropagation();
+                    var $this = $(this),
+                        $depthTarget = $this.next(),
+                        $siblings = $this.parent().siblings();
+                    
+                    $this.parent('li').find('ul li').removeClass('on');
+                    $siblings.removeClass('on');
+                    $siblings.find('ul').slideUp(250);
+                    
+                    if($depthTarget.css('display') == 'none') {
+                    _self.activeOn($this);
+                    $depthTarget.slideDown(_self.speed);
+                    } else {
+                    $depthTarget.slideUp(_self.speed);
+                    _self.activeOff($this);
+                    }
+                })
+                },
+                activeOff : function($target) {
+                $target.parent().removeClass('on');
+                },
+                activeOn : function($target) {
+                $target.parent().addClass('on');
+                }
+            };
+            // Call lnbUI
+            $(function(){
+                lnbUI.click('#lnb li', 300)
+            });
+            }(jQuery));
+        </script>
+    </head>
+    <body>
+        <header>
+            <div id="header-left">
+                <a href="./index.html"><img src="img/logo.png" alt="Portable유통" width="180px" height="70px"></a>
+            </div>
+            <div id="header-right">
+                <form>
+                    <input id="search-input" type="text"/>
+                    <input id="search-submit" type="image" src="img/searchicon.png" value="submit"/>
+                </form>
+            </div>
+        </header>
+        <nav>
+            <div class="pull-left">
+                <ul class="outer-menu">
+                    <li class="outer-menu-item">
+                        <span class="menu-title">회사소개</span>
+                        <ul class="inner-menu">
+                            <li class="inner-menu-item"><a href="./info.html?info_item=info">회사소개</a></li>
+                            <li class="inner-menu-item"><a href="./info.html?info_item=history">회사연혁</a></li>
+                            <li class="inner-menu-item"><a href="./info.html?info_item=CEO">CEO인사말</a></li>
+                        </ul>
+                    </li>
+                    <li class="outer-menu-item">
+                        <span class="menu-title">채용정보</span>
+                        <ul class="inner-menu">
+                            <li class="inner-menu-item"><a href="./careers.html">채용공고</a></li>
+                            <li class="inner-menu-item"><a href="./careers.html">채용문의</a></li>
+                        </ul>
+                    </li>
+                    <li class="outer-menu-item">
+                        <span class="menu-title">제품정보</span>
+                        <ul class="inner-menu">
+                            <li class="inner-menu-item"><a href="./list.html?list=smartphone">스마트폰</a></li>
+                            <li class="inner-menu-item"><a href="./list.html?list=tablet">테블릿</a></li>
+                            <li class="inner-menu-item"><a href="./list.html?list=notebook">노트북</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <div class="pull-center">
+                <a href="https://www.samsung.com/"><span class="menu-title" style="color: blue;font-weight: 1000;font-size: 27px;">SAMSUNG</span></a>
+                <a href="https://www.lge.co.kr/"><span class="menu-title" style="color: rgb(200, 5, 168);font-weight: 1000;;font-size: 27px;">LG</span></a>
+            </div>
+            <div class="pull-right">
+                <ul class="outer-menu">
+                    <li class="outer-menu-item">
+                        <span class="menu-title">고객지원</span>
+                        <ul class="inner-menu">
+                            <li class="inner-menu-item"><a href="./service.html?service=as">A/S서비스</a></li>
+                            <li class="inner-menu-item"><a href="./service.html?service=faq">자주하는 질문</a></li>
+                        </ul>
+                    </li>
+                    <li class="outer-menu-item">
+                        <span class="menu-title">로그인</span>
+                        <ul class="inner-menu">
+                            <li class="inner-menu-item"><a href="./login.html">로그인</a></li>
+                            <li class="inner-menu-item"><a href="#">회원가입</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <hr id="nav-line">
+        <div id="lnb">
+            <h3>상세검색<a href="./list.html" style="text-decoration:underline;color:rgb(65, 64, 64);font-size: 15px;padding-left: 13px;">전체보기</a></h3>
+            <ul>
+                <li><a href="#">스마트폰</a>
+                    <ul>
+                        <li><button id="Samsung_Btn" type="button" onclick='onclick_Samsung_Btn()'>SAMSUNG Series</button></li>
+                        <li><button id="Apple_Btn" type="button" onclick='onclick_Apple_Btn()'>APPLE Series</button></li>
+                    </ul>
+                </li>
+                <li><a href="#">테블릿</a>
+                    <ul>
+                        <li><button id="Galaxy_Tab_Btn" type="button" onclick='onclick_Galaxy_Tab_Btn()'>Galaxy Tab Series</button></li>
+                        <li><button id="iPad_Btn" type="button" onclick='onclick_IPAD_Btn()'>i Pad</button></li>
+                    </ul>
+                </li>
+                <li><a href="#">노트북</a>
+                    <ul>
+                        <li><button id="LG_Gram_Btn" type="button" onclick='onclick_Gram_Btn()'>LG Gram 2021</button></li>
+                        <li><button id="SamsungNoteBook_Btn" type="button" onclick='onclick_SamsungNoteBook_Btn()'>SAMSUNG NoteBook</button></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+        <div>
+            <section>
+                <ul id="SAMSUNG_Phone_Series">
+                    <li><div>
+                        <div>
+                            <img src="./img/smartphone/galaxy_s21.jpg" width="250px" height="250px" alt="삼성 s21">
+                            <h3>갤럭시 S21 Ultra 5G 자급제</h3>
+                            <ul>
+                                <li><strong>SM-G998NZKEKOO</strong></li><br>
+                                <li>-해상도 : 3200 x 1440 (Quad HD+)</li>
+                                <li>-S펜 지원 : 지원함</li>
+                                <li>-센서 : 가속도,기압,지문,자이로,지자기,홀,조도,근접 </li>
+                                <li>-메모리 용량 : 12 GB</li>
+                                <li>-저장공간 : 256 GB</li>
+                                <li>-배터리 용량 : 5000(mAh, Typical)</li>
+                            </ul>
+                            <h2><br><br><br>1,452,000원<p></p></h2>
+                            <a href="./product-info.html?product=galaxy_s21">자세히보기</a>
+                        </div>
+                    </div></li>
+                    <li><div>
+                        <div>
+                            <img src="./img/smartphone/galaxy_note20.png" width="250px" height="250px" alt="삼성 노트20">
+                            <h3>갤럭시 노트20 Ultra 5G 자급제</h3>
+                            <ul>
+                                <li><strong>SM-N986NZNEKOO</strong></li><br>
+                                <li>-해상도 : 3088 x 1440 (Quad HD+)</li>
+                                <li>-S펜 지원 : 지원함</li>
+                                <li>-센서 : 가속도,기압,지문,자이로,지자기,홀,조도,근접 </li>
+                                <li>-메모리 용량 : 12 GB</li>
+                                <li>-저장공간 : 256 GB</li>
+                                <li>-배터리 용량 : 4500(mAh, Typical)</li>
+                            </ul>
+                            <h2><br><br><br>1,452,000원<p></p></h2>
+                            <a href="./product-info.html?product=galaxy_note20">자세히보기</a>
+                        </div>
+                    </div></li>
+                    <li><div>
+                        <div>
+                            <img src="./img/smartphone/galaxy_fold2.png" width="250px" height="250px" alt="삼성 Z 폴드2">
+                            <h3>갤럭시 Z 폴드2 5G 자급제</h3>
+                            <ul>
+                                <li><strong>SM-F916NZNAKOO</strong></li><br>
+                                <li>-해상도(Main) : 2208 x 1768 (QXGA+)</li>
+                                <li>-해상도 (Sub) : 2260 x 816 (HD+)</li>
+                                <li>-센서 : 가속도,기압,지문,자이로,지자기,홀,조도,근접 </li>
+                                <li>-메모리 용량 : 12 GB</li>
+                                <li>-저장공간 : 256 GB</li>
+                                <li>-배터리 용량 : 4500(mAh, Typical)</li>
+                            </ul>
+                            <h2><br><br><br>1,892,000원<p></p></h2>
+                            <a href="./product-info.html?product=galaxy_fold2">자세히보기</a>
+                        </div>
+                    </div></li>
+                    <li><div>
+                        <div>
+                            <img src="./img/smartphone/galaxy_zfilp2.png" width="250px" height="250px" alt="삼성 Z플립">
+                            <h3>갤럭시 Z 플립 5G 자급제</h3>
+                            <ul>
+                                <li><strong>SM-F707NZNAKOO</strong></li><br>
+                                <li>-해상도(Main) : 2636 x 1080 (FHD+)</li>
+                                <li>-해상도 (Sub) : 112 x 300</li>
+                                <li>-센서 : 가속도,기압,지문,자이로,지자기,홀,조도,근접 </li>
+                                <li>-메모리 용량 : 8 GB</li>
+                                <li>-저장공간 : 256 GB</li>
+                                <li>-배터리 용량 : 3300(mAh, Typical)</li>
+                            </ul>
+                            <h2><br><br><br>1,349,700원<p>1,496,000원</p></h2>
+                            <a href="./product-info.html?product=galaxy_zfilp2">자세히보기</a>
+                        </div>
+                    </div></li>
+                </ul>
+                <ul id="APPLE_iPhone_Series">
+                    <li><div>
+                        <div>
+                            <img src="./img/smartphone/iphone12mini.png" width="250px" height="250px" alt="애플 아이폰 12 mini">
+                            <h3>iPhone 12 mini</h3>
+                            <ul>
+                                <li><strong>MagSafe 자석식 충전 지원</strong></li><br>
+                                <li>-해상도 : 2436 x 1125</li>
+                                <li>-프로세서 : A14 바이오닉</li>
+                                <li>-센서 : Face ID,LiDAR 스캐너,기압계,3축 자이로</li>
+                                <li>-메모리 용량 : 4 GB</li>
+                                <li>-저장공간 : 128 / 256 GB</li>
+                                <li>-배터리 용량 : 2227(mAh, Typical)</li>
+                            </ul>
+                            <h2><br><br><br>&nbsp;950,000원~<p></p></h2>
+                            <a href="./product-info.html?product=apple_iphone12_mini">자세히보기</a>
+                        </div>
+                    </div></li>
+                    <li><div>
+                        <div>
+                            <img src="./img/smartphone/iphone12.png" width="250px" height="250px" alt="애플 아이폰 12">
+                            <h3>iPhone 12</h3>
+                            <ul>
+                                <li><strong>MagSafe 자석식 충전 지원</strong></li><br>
+                                <li>-해상도 : 2532 x 1170</li>
+                                <li>-프로세서 : A14 바이오닉</li>
+                                <li>-센서 : 가속도,기압,지문,자이로,지자기,홀,조도,근접 </li>
+                                <li>-메모리 용량 : 4 GB</li>
+                                <li>-저장공간 : 256 GB</li>
+                                <li>-배터리 용량 : 2815(mAh, Typical)</li>
+                            </ul>
+                            <h2><br><br><br>1,300,000원~<p></p></h2>
+                            <a href="./product-info.html?product=apple_iphone12">자세히보기</a>
+                        </div>
+                    </div></li>
+                    <li><div>
+                        <div>
+                            <img src="./img/smartphone/iphone12pro.png" width="250px" height="250px" alt="애플 아이폰 12 pro">
+                            <h3>iPhone 12 Pro</h3>
+                            <ul>
+                                <li><strong>MagSafe 자석식 충전 지원</strong></li><br>
+                                <li>-해상도 : 2532 x 1170</li>
+                                <li>-프로세서 : A14 바이오닉</li>
+                                <li>-센서 : Face ID,LiDAR 스캐너,기압계,3축 자이로</li>
+                                <li>-메모리 용량 : 6 GB</li>
+                                <li>-저장공간 : 256 GB</li>
+                                <li>-배터리 용량 : 2815(mAh, Typical)</li>
+                            </ul>
+                            <br>
+                            <h2><br><br><br>1,738,000원~<p></p></h2>
+                            <a href="./product-info.html?product=apple_iphone12_pro">자세히보기</a>
+                        </div>
+                    </div></li>
+                </ul>
+                <ul id="SAMSUNG_Tab_Series">
+                    <li><div>
+                        <div>
+                            <img src="./img/tablet/galaxy_tabS7_wifi.png" width="250px" height="250px" alt="삼성 갤럭시 탭 S7">
+                            <h3>갤럭시 탭 S7 (Wi-Fi)</h3>
+                            <ul>
+                                <li><strong>SM-T870NDBBKOO</strong></li><br>
+                                <li>-해상도 (Main) : 2560 x 1600 (WQXGA) </li>
+                                <li>-S펜 지원 : 지원함</li>
+                                <li>-센서 : 가속도,기압,지문,자이로,지자기,홀,조도,근접 </li>
+                                <li>-메모리 용량 : 12 GB</li>
+                                <li>-저장공간 : 512 GB</li>
+                                <li>-배터리 용량 : 8000(mAh, Typical)</li>
+                            </ul>
+                            <h2><br><br><br>&nbsp;999,400원<p></p></h2>
+                            <a href="./product-info.html?product=galaxy_tab_S7">자세히보기</a>
+                        </div>
+                    </div></li>
+                    <li><div>
+                        <div>
+                            <img src="./img/tablet/galaxy_tabS7_wifi.png" width="250px" height="250px" alt="삼성 갤럭시 탭 S7+(LTE)">
+                            <h3>갤럭시 탭 S7+ (LTE)</h3>
+                            <ul>
+                                <li><strong>SM-T975NDBBKOO</strong></li><br>
+                                <li>-해상도 (Main) : 2800 x 1752 (WQXGA+)</li>
+                                <li>-S펜 지원 : 지원함</li>
+                                <li>-센서 : 가속도,기압,지문,자이로,지자기,홀,조도,근접 </li>
+                                <li>-메모리 용량 : 12 GB</li>
+                                <li>-저장공간 : 512 GB</li>
+                                <li>-배터리 용량 : 10090(mAh, Typical)</li>
+                            </ul>
+                            <h2><br><br><br>1,349,200원<p></p></h2>
+                            <a href="./product-info.html?product=galaxy_s7plus_lte">자세히보기</a>
+                        </div>
+                    </div></li>
+                    <div>
+                        <div>
+                            <img src="./img/tablet/galaxy_tabS7_wifi.png" width="250px" height="250px" alt="삼성 갤럭시 탭 S7+ 5G">
+                            <h3>갤럭시 탭 S7+ 5G</h3>
+                            <ul>
+                                <li><strong>SM-T976NDBBKOO</strong></li><br>
+                                <li>-해상도 (Main) : 2800 x 1752 (WQXGA+)</li>
+                                <li>-S펜 지원 : 지원함</li>
+                                <li>-센서 : 가속도,기압,지문,자이로,지자기,홀,조도,근접 </li>
+                                <li>-메모리 용량 : 12 GB</li>
+                                <li>-저장공간 : 512 GB</li>
+                                <li>-배터리 용량 : 10090(mAh, Typical)</li>
+                            </ul>
+                            <h2><br><br><br>1,449,300원<p></p></h2>
+                            <a href="./product-info.html?product=galaxy_s7plus_5g">자세히보기</a>
+                        </div>
+                    </div></li>
+                </ul>
+                <ul id="APPLE_iPad_Series_">
+                    <li><div>
+                        <div>
+                            <br>
+                            <img src="./img/tablet/ipad2020.png" width="250px" height="250px" alt="애플 iPad">
+                            <h3>iPad 10.2인치(8세대)</h3>
+                            <ul>
+                                <li><strong>프로세서 : A12 Bionic 칩(64비트 아키텍처)</strong></li><br>
+                                <li>-해상도 : 2160 x 1620</li>
+                                <li>-Apple Pencil 지원(1세대)</li>
+                                <li>-센서 : Touch ID,3축 자이로,가속도계,기압계,주변광</li>
+                                <li>-메모리 용량 : 3 GB</li>
+                                <li>-저장공간 : 32 / 128 GB</li>
+                                <li>-배터리 용량 : 8557(mAh, Typical)</li>
+                            </ul>
+                            <h2><br><br><br>&nbsp;449,000원<p></p></h2>
+                            <a href="./product-info.html?product=apple_ipad2020">자세히보기</a>
+                        </div>
+                    </div></li>
+                </ul>
+                <ul id="LG_NoteBook_Series">
+                    <li><div>
+                        <div>
+                            <img src="./img/notebook/lg_gram.png" width="250px" height="250px" alt="엘지 그램14">
+                            <h3>LG Gram 14</h3>
+                            <ul>
+                                <li><strong>14Z90P-GA30K</strong></li><br>
+                                <li>-화면크기 : 35.5 cm</li>
+                                <li>-OS : Windows 10 Home(64비트)</li>
+                                <li>-CPU : 11세대 인텔® 코어™ i3-1115G4 프로세서</li>
+                                <li>-메모리 용량 : 8 GB</li>
+                                <li>-SSD : 256 GB (M.2, NVMe™) + 확장 슬롯1</li>
+                            </ul>
+                            <h2><br><br><br>1,374,300원<p>1,507,000원</p></h2>
+                            <a href="./product-info.html?product=lg_gram14">자세히보기</a>
+                        </div>
+                    </div></li>
+                    <li><div>
+                        <div>
+                            <img src="./img/notebook/lg_gram.png" width="250px" height="250px" alt="엘지 그램16">
+                            <h3>LG Gram 16</h3>
+                            <ul>
+                                <li><strong>16Z90P-GA70K</strong></li><br>
+                                <li>-화면크기 : 40.6cm</li>
+                                <li>-OS : Windows 10 Home(64비트)</li>
+                                <li>-CPU : 인텔® Evo™ 플랫폼 11세대 인텔® 코어™ i7</li>
+                                <li>-메모리 용량 : 8 GB</li>
+                                <li>-SSD : 256 GB (M.2, NVMe™) + 확장 슬롯1</li>
+                            </ul>
+                            <h2><br><br><br>2,096,600원<p>2,299,000원</p></h2>
+                            <a href="./product-info.html?product=lg_gram16">자세히보기</a>
+                        </div>
+                    </div></li>
+                    <li><div>
+                        <div>
+                            <img src="./img/notebook/lg_gram.png" width="250px" height="250px" alt="엘지 그램17">
+                            <h3>LG Gram 17</h3>
+                            <ul>
+                                <li><strong>17Z90P-GA70K</strong></li><br>
+                                <li>-화면크기 : 43.1 cm</li>
+                                <li>-OS : Windows 10 Home(64비트)</li>
+                                <li>-CPU : 인텔® Evo™ 플랫폼 11세대 인텔® 코어™ i7</li>
+                                <li>-메모리 용량 : 8 GB</li>
+                                <li>-SSD : 256 GB (M.2, NVMe™) + 확장 슬롯1</li>
+                            </ul>
+                            <h2><br><br><br>2,196,900원<p>2,409,000원</p></h2>
+                            <a href="./product-info.html?product=lg_gram17">자세히보기</a>
+                        </div>
+                    </div></li>
+                </ul>
+                <ul id="SAMSUNG_NoteBook_Series">
+                    <li><div>
+                        <div>
+                            <img src="./img/notebook/galaxy_book.jpg" width="250px" height="250px" alt="갤럭시 북">
+                            <h3>갤럭시북</h3>
+                            <ul>
+                                <li><strong>NT750XDA-KC58S</strong></li><br>
+                                <li>-화면크기 : 39.6 cm</li>
+                                <li>-OS : Windows 10 Home(64비트)</li>
+                                <li>-CPU : Intel® Core™ i5-1135G7 Processor</li>
+                                <li>-메모리 용량 : 8 GB</li>
+                                <li>-SSD : 256 GB NVMe SSD + 확장 슬롯2</li>
+                            </ul>
+                            <h2><br><br><br>1,190,000원<p>1,250,000원</p></h2>
+                            <a href="./product-info.html?product=galaxy_book">자세히보기</a>
+                        </div>
+                    </div></li>
+                    <li><div>
+                        <div>
+                            <img src="./img/notebook/galaxy_book_pro.jpg" width="250px" height="250px" alt="갤럭시 북pro">
+                            <h3>갤럭시북 Pro</h3>
+                            <ul>
+                                <li><strong>NT950XDC-XD71S</strong></li><br>
+                                <li>-화면크기 : 39.6 cm</li>
+                                <li>-OS : Windows 10 Home(64비트)</li>
+                                <li>-CPU : Intel® Core™ i7-1165G7 Processor</li>
+                                <li>-메모리 용량 : 16 GB</li>
+                                <li>-SSD : 1 TB NVMe SSD + 확장 슬롯2</li>
+                                <li>-그래픽 : NVIDIA® GeForce® MX450 Graphics</li>
+                            </ul>
+                            <h2><br><br><br>2,290,000원<p>2,440,000원</p></h2>
+                            <a href="./product-info.html?product=galaxy_book_pro">자세히보기</a>
+                        </div>
+                    </div></li>
+                    <li><div>
+                        <div>
+                            <img src="./img/notebook/galaxy_book_flex2.jpg" width="250px" height="250px" alt="갤럭시 북 FLEX2">
+                            <h3>갤럭시북 FLEX2</h3>
+                            <ul>
+                                <li><strong>NT950QDZ-G58AZ</strong></li><br>
+                                <li>-화면크기 : 39.6 cm</li>
+                                <li>-OS : Windows 10 Home(64비트)</li>
+                                <li>-CPU : Intel® Core™ i5-1135G7 Processor</li>
+                                <li>-메모리 용량 : 8 GB</li>
+                                <li>-SSD : 250 GB NVMe SSD</li>
+                                <li>-그래픽 : NVIDIA® GeForce® MX450 Graphics</li>
+                            </ul>
+                            <h2><br><br><br>1,898,000원<p>2,019,140원</p></h2>
+                            <a href="./product-info.html?product=galaxy_book_flex2">자세히보기</a>
+                        </div>
+                    </div></li>
+                </ul>
+            </section>
+        </div>
+        <script src="./js/list_setting.js"></script>
+    </body>
+</html>

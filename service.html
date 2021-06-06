@@ -1,0 +1,285 @@
+<html>
+    <head>
+        <title>Portable유통 - 고객센터</title>
+        <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0">
+        <link href="./css/main-header.css" rel="stylesheet">
+        <link href="./css/main-nav.css" rel="stylesheet">
+        <link href="./css/service.css" rel="stylesheet">
+        <link href="./css/main-footer.css" rel="stylesheet">
+        <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+        <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.js"></script>
+        <script>
+            $(document).ready(function () {
+                $('.outer-menu-item').hover(function () {
+                    $('#nav-line').css('margin-top','95px');
+                    $(this).find('.inner-menu').show();
+                }, function () {
+                    $('#nav-line').css('margin-top','10px');
+                    $(this).find('.inner-menu').hide();
+                });
+            });
+            $(document).ready(function(){
+                $("li.question").click(function(){
+                    $(this).next().toggle("fast");
+                });
+            });
+        </script>
+    </head>
+    <body>
+        <header>
+            <div id="header-left">
+                <a href="./index.html"><img src="img/logo.png" alt="Portable유통" width="180px" height="70px"></a>
+            </div>
+            <div id="header-right">
+                <form>
+                    <input id="search-input" type="text"/>
+                    <input id="search-submit" type="image" src="img/searchicon.png" value="submit"/>
+                </form>
+            </div>
+        </header>
+        <nav>
+            <div class="pull-left">
+                <ul class="outer-menu">
+                    <li class="outer-menu-item">
+                        <span class="menu-title">회사소개</span>
+                        <ul class="inner-menu">
+                            <li class="inner-menu-item"><a href="./info.html?info_item=info">회사소개</a></li>
+                            <li class="inner-menu-item"><a href="./info.html?info_item=history">회사연혁</a></li>
+                            <li class="inner-menu-item"><a href="./info.html?info_item=CEO">CEO인사말</a></li>
+                        </ul>
+                    </li>
+                    <li class="outer-menu-item">
+                        <span class="menu-title">채용정보</span>
+                        <ul class="inner-menu">
+                            <li class="inner-menu-item"><a href="./careers.html">채용공고</a></li>
+                            <li class="inner-menu-item"><a href="./careers.html">채용문의</a></li>
+                        </ul>
+                    </li>
+                    <li class="outer-menu-item">
+                        <span class="menu-title">제품정보</span>
+                        <ul class="inner-menu">
+                            <li class="inner-menu-item"><a href="./list.html?list=smartphone">스마트폰</a></li>
+                            <li class="inner-menu-item"><a href="./list.html?list=tablet">테블릿</a></li>
+                            <li class="inner-menu-item"><a href="./list.html?list=notebook">노트북</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <div class="pull-center">
+                <a href="https://www.samsung.com/"><span class="menu-title" style="color: blue;font-weight: 1000;font-size: 27px;">SAMSUNG</span></a>
+                <a href="https://www.lge.co.kr/"><span class="menu-title" style="color: rgb(200, 5, 168);font-weight: 1000;;font-size: 27px;">LG</span></a>
+            </div>
+            <div class="pull-right">
+                <ul class="outer-menu">
+                    <li class="outer-menu-item">
+                        <span class="menu-title">고객지원</span>
+                        <ul class="inner-menu">
+                            <li class="inner-menu-item"><a href="./service.html?service=as">A/S서비스</a></li>
+                            <li class="inner-menu-item"><a href="./service.html?service=faq">자주하는 질문</a></li>
+                        </ul>
+                    </li>
+                    <li class="outer-menu-item">
+                        <span class="menu-title">로그인</span>
+                        <ul class="inner-menu">
+                            <li class="inner-menu-item"><a href="./login.html">로그인</a></li>
+                            <li class="inner-menu-item"><a href="#">회원가입</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <hr id="nav-line">
+        <aside class="select_Bar">
+            <div>
+                <ul>
+                    <li class="active" ><h3 style="padding: 6px;">고객지원</h3></li>
+                    <li><a href="./service.html?service=as">A/S 서비스 신청</a></li>
+                    <li><a href="./service.html?service=faq">자주하는 질문</a></li>
+                  </ul>
+            </div>
+        </aside>
+        <section id="as_section">
+            <div class="content">
+                <p id="info_p">HOME > 고객지원 > A/S서비스</p>
+                <article class="step">
+                    <h2>1.이용절차 안내</h2>
+                    <div class="steps">
+                        <div class="step1">
+                            <h2>STEP 1 <strong>개인정보동의</strong></h2>
+                            <div>
+                                <img src="./img/step1.png" width="55px" alt="">
+                                <p style="padding-left: 25px;">개인정보 수집 및 이용에 관한 동의가 필요합니다.</p>
+                            </div>
+                        </div>
+                        <div class="step2">
+                            <h2>STEP 2 <strong>AS 서비스 신청</strong></h2>
+                            <div>
+                                <img src="./img/step2.png"  width="55px" alt="">
+                                <p style="padding-left: 25px;">각종 증상에 대한 설명과 사진이 필요합니다.</p>
+                            </div>
+                        </div>
+                        <div class="step3">
+                            <h2>STEP 3 <strong>완료</strong></h2>
+                            <div>
+                                <img src="./img/step3.png"  width="55px" alt="">
+                                <p style="padding-left: 25px;">신청시 입력한 이메일과 문자로 담당자가 답변을 드립니다.</p>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+                <article class="check">
+                    <h2>2.이용 동의안내</h2>
+                    <hr id="check_hr">
+                    <div class="agree">
+                        <h3>개인정보 수집 · 이용 동의</h3>
+                        <p>Portable유통 주식회사(이하 ´회사´라 합니다)는 최초 회원 가입 또는 서비스 이용시
+                            이용자로부터 아래와 같은 개인정보를 수집하고 있습니다. 이용자는 본 개인정보
+                            수집ㆍ이용 동의서에 따른 동의 시, ´필요한 최소한의 정보 외의
+                            개인정보´ 수집ㆍ이용에 동의하지 아니할 권리가 있습니다. 개인정보 처리에 대한
+                            상세한 사항은 삼성닷컴 홈페이지(http://portablesales.kro.kr/00000000/)에 공개한
+                            ´개인정보처리방침´을 참조하십시오. 다만, 본 동의서 내용과 상충되는 부분은 
+                            본 동의서의 내용이 우선합니다.</p>
+                        <h3>[필수] 개인정보 수집∙이용 동의</h3>
+                        <p>※귀하께서는 필수항목 수집ㆍ이용에 대한 동의를 거부하실 수 있으나, 이는 서비스 제공에 필수적으로 
+                            제공되어야 하는 정보이므로, 동의를 거부하실 경우 이메일 일반 문의 서비스를 이용 하실 수 없습니다.</p>
+                        
+                        <div class="checklist">
+                            <ul>
+                                <li>수집 항목 : 성명, 이메일, 전화번호, 제목, 내용</li>
+                                <li>수집 목적 : 문의/신고접수 및 결과 회신</li>
+                                <li>수집 후 1년 (소비자의 불만 또는 분쟁처리에 관한 기록)</li>
+                            </ul>
+                        </div>
+                        <div class="check_radio_Btn">
+                            <input type="radio" id="agree" name="agree" value="agree" checked>
+                            <label for="agree">동의함</label>
+                            <input type="radio" id="disagree" name="agree" value="disagree">
+                            <label for="disagree">동의안함</label>
+                        </div>
+                    </div>
+                </article>
+                <article class="info_submit">
+                    <h2>3.문의하기</h2>
+                    <div class="agree">
+                        <h3>제품 정보</h3>
+                        <hr>
+                        <p>[필수]서비스를 받으시고자하는 제품의 정보를 알려주세요.</p>
+                        <div class="whiteboard">
+                            <select name="product">
+                                <option value="기타">기타</option>
+                                <optgroup label="휴대기기">
+                                    <option value="스마트폰">스마트폰</option>
+                                    <option value="테블릿">테블릿</option>
+                                    <option value="노트북">노트북</option>
+                                </optgroup>
+                                <optgroup label="가전제품">
+                                    <option value="냉장고">냉장고</option>
+                                    <option value="세탁기">세탁기</option>
+                                    <option value="건조기">건조기</option>
+                                    <option value="청소기">청소기</option>
+                                    <option value="에어컨">에어컨</option>
+                                </optgroup>
+                            </select>
+                            <input type="text" id="product_code" placeholder="모델 코드">
+                        </div>
+                    </div>
+                    <div class="agree">
+                        <h3>사용자 정보</h3>
+                        <hr>
+                        <p>[필수]문의를 하시는 분의 정보를 알려주세요.</p>
+                        <div class="whiteboard">
+                            <ul>
+                                <li><span>성명 : </span><input type="text" id="name" placeholder="성명을 입력해주세요"></li>
+                                <li><span>번호 : </span><input type="phone" id="phone_number" placeholder="- 없이전화번호를 입력해주세요"></li>
+                                <li><span>이메일 : </span><input type="email" id="email" placeholder="이메일을 입력해주세요"></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="agree">
+                        <h3>문의 정보</h3>
+                        <hr>
+                        <p>[필수]문의하려는 내용을 자세히 입력해주세요.</p>
+                        <div class="checklist">
+                            <textarea id="description" style=" border:none;width: 100%; height: 150px; padding: 7px;"></textarea>
+                        </div>
+                    </div>
+                    <div class="agree">
+                        <h3>첨부파일</h3>
+                        <hr>
+                        <p>[선택]기기사진과 문제가 되는 장면을 보여주세요.</p>
+                        <div class="checklist">
+                            <input type="file" name="" id="">
+                        </div>
+                    </div>
+                    <div id="forBtn">
+                        <button class="submit_Btn" onclick='SubmitOnclick()' type="button">접수하기</button>
+                    </div>
+                </article>
+            </div>
+        </section>
+        <section id="faq_section">
+            <div class="content2">
+                <p id="info_p">HOME > 고객지원 > 자주하는 질문</p>
+                <div id="box_qna">
+                    <ul>
+                        <li class="question">
+                            <img src="https://happyjung.diskn.com/data/lecture/icon_jquery_faq2_icon_q.png" width="40px"><p>고객센터 전화번호와 운영시간은 어떻게 되나요?</p></li>
+                        <li class="answer">
+                            <div>
+                                <img src="https://happyjung.diskn.com/data/lecture/icon_jquery_faq2_icon_a.png" width="35px"><p>*대표번호 : 062-972-1234&nbsp;&nbsp;&nbsp; *운영시간 : 평일 09:00 ~ 18:00 (주말, 공휴일 휴무)</p>
+                            </div></li>
+                        <li class="question">
+                            <img src="https://happyjung.diskn.com/data/lecture/icon_jquery_faq2_icon_q.png" width="40px"><p>상담 예약은 무엇인가요?</p></li>
+                        <li class="answer">
+                            <div>
+                                <img src="https://happyjung.diskn.com/data/lecture/icon_jquery_faq2_icon_a.png" width="35px"><p>전화, 원격, 영상 중 원하시는 방법을 선택하여 상담을 예약하시면, 편하신 시간대에 상담사가 전화를 드립니다.</p>
+                            </div></li>
+                        <li class="question">
+                            <img src="https://happyjung.diskn.com/data/lecture/icon_jquery_faq2_icon_q.png" width="40px"><p>택배 배송상품은 언제부터 확인이 가능하나요?</p></li>
+                        <li class="answer">
+                            <div>
+                                <img src="https://happyjung.diskn.com/data/lecture/icon_jquery_faq2_icon_a.png" width="35px"><p>주문하신 제품은 Portable 물류센터에서 출고 처리가 완료된 제품에 한해서만 배송제품의 송장번호를 확인하실 수 있습니다.</p>
+                            </div></li>
+                        <li class="question">
+                            <img src="https://happyjung.diskn.com/data/lecture/icon_jquery_faq2_icon_q.png" width="40px"><p>결제 변경 가능한가요?</p></li>
+                        <li class="answer">
+                            <div>
+                                <img src="https://happyjung.diskn.com/data/lecture/icon_jquery_faq2_icon_a.png" width="35px"><p>제품 배송 전인 경우, 기존 주문 취소 후 재주문하시고, 출고 이후인 경우에는 기사를 통해 인수 거부 요청 후 재 주문 하셔야 합니다.</p>
+                            </div></li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        <footer>
+            <div class="footer_list">
+                <a href="#"><span>회사소개</span></a>
+                <p>|</p>
+                <a href="#"><span>개인정보처리방침</span></a>
+                <p>|</p>
+                <a href="#"><span>이메일 무단수집거부</span></a>
+                <p>|</p>
+                <a href="#"><span>법적고지</span></a>
+            </div>
+            <div class="info">
+                <div id="info1">
+                    <span>광주광역시 00구 00000로 000번길 00 (00동)</span>
+                    <p>|</p>
+                    <span>대표이사 000</span>
+                </div>
+                <div id="info2">
+                    <p>|</p>
+                    <span>사업자 등록번호 000-00-00000</span>
+                    <p>|</p>
+                    <span>대표변호 062) 000-0000</span>
+                </div>
+            </div>
+            <div class="copyright">
+                <img src="./img/white_logo.png" width="150px">
+                <span>본 사이트의 콘텐츠는 저작권법의 보호를 받는바, 무단 전재, 복사, 배포 등을 금합니다<br></span>
+                <span style="float: right;;">Cospyright© 2021 Portable유통. All Rights Reserved</span>
+            </div>
+        </footer>
+        <script src="./js/service.js"></script>
+    </body>
+</html>

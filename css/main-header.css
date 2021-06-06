@@ -1,0 +1,36 @@
+*{
+    margin:0px;
+    padding:0px;
+    font-family: '맑은 고딕','Malgun Gothic','Gothic', sans-serif;
+}
+a{text-decoration: none;color: black;}
+li{list-style: none;}
+header{height: 70px;padding: 10px;}
+#header-left{float: left;}
+#header-right{float: right;}
+#header-right{margin-right: 50px;padding-top: 30px;}
+#search-input{
+    float: left;
+    border-color: orange;
+    border-radius: 20px 20px 20px 20px;
+    background-color: #ffffff;
+    border: 1px solid #cccccc;
+    padding: 0 0 0 12px;
+    width: 300px;
+    height: 30px;
+    margin: 1px, 2px;
+}
+#search-input:focus{
+    border-color:orange;
+    outline: 0;
+}
+#search-submit {
+    width: 35px;
+    height: 28;
+    padding: 1px 5px;
+    border-radius: 10px;
+}
+
+@media (max-width: 400px) {
+    #header-right{display: none;}
+}

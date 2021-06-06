@@ -1,0 +1,158 @@
+<html>
+    <head>
+        <title>Portable유통 - 제품정보</title>
+        <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0">
+        <meta property="og:title" content="Portable유통 - 제품정보"/>
+        <meta property="og:url" content="https://portablesales.kro.kr"/>
+        <meta property="og:image" content="https://firebasestorage.googleapis.com/v0/b/web-study-project-50c57.appspot.com/o/logo.png?alt=media&token=850bc38a-17e5-45c4-9762-0658ef8f2599"/>
+        <meta property="og:description" content="휴대용 전자기기 판매 전문!"/>
+        <meta property="og:article:author" content="(주)Portable유통"/>
+        <meta property="og:article:author:url" content="https://portablesales.kro.kr"/>
+        <link href="./css/main-header.css" rel="stylesheet">
+        <link href="./css/main-nav.css" rel="stylesheet">
+        <link href="./css/product_info.css" rel="stylesheet">
+        <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+        <script>
+            $(document).ready(function () {
+                $('.outer-menu-item').hover(function () {
+                    $('#nav-line').css('margin-top','95px');
+                    $(this).find('.inner-menu').show();
+                }, function () {
+                    $('#nav-line').css('margin-top','10px');
+                    $(this).find('.inner-menu').hide();
+                });
+            });
+        </script>
+    </head>
+    <body>
+        <header>
+            <div id="header-left">
+                <a href="./index.html"><img src="img/logo.png" alt="Portable유통" width="180px" height="70px"></a>
+            </div>
+            <div id="header-right">
+                <form>
+                    <input id="search-input" type="text"/>
+                    <input id="search-submit" type="image" src="img/searchicon.png" value="submit"/>
+                </form>
+            </div>
+        </header>
+        <nav>
+            <div class="pull-left">
+                <ul class="outer-menu">
+                    <li class="outer-menu-item">
+                        <span class="menu-title">회사소개</span>
+                        <ul class="inner-menu">
+                            <li class="inner-menu-item"><a href="./info.html?info_item=info">회사소개</a></li>
+                            <li class="inner-menu-item"><a href="./info.html?info_item=history">회사연혁</a></li>
+                            <li class="inner-menu-item"><a href="./info.html?info_item=CEO">CEO인사말</a></li>
+                        </ul>
+                    </li>
+                    <li class="outer-menu-item">
+                        <span class="menu-title">채용정보</span>
+                        <ul class="inner-menu">
+                            <li class="inner-menu-item"><a href="./careers.html">채용공고</a></li>
+                            <li class="inner-menu-item"><a href="./careers.html">채용문의</a></li>
+                        </ul>
+                    </li>
+                    <li class="outer-menu-item">
+                        <span class="menu-title">제품정보</span>
+                        <ul class="inner-menu">
+                            <li class="inner-menu-item"><a href="./list.html?list=smartphone">스마트폰</a></li>
+                            <li class="inner-menu-item"><a href="./list.html?list=tablet">테블릿</a></li>
+                            <li class="inner-menu-item"><a href="./list.html?list=notebook">노트북</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <div class="pull-center">
+                <a href="https://www.samsung.com/"><span class="menu-title" style="color: blue;font-weight: 1000;font-size: 27px;">SAMSUNG</span></a>
+                <a href="https://www.lge.co.kr/"><span class="menu-title" style="color: rgb(200, 5, 168);font-weight: 1000;;font-size: 27px;">LG</span></a>
+            </div>
+            <div class="pull-right">
+                <ul class="outer-menu">
+                    <li class="outer-menu-item">
+                        <span class="menu-title">고객지원</span>
+                        <ul class="inner-menu">
+                            <li class="inner-menu-item"><a href="./service.html?service=as">A/S서비스</a></li>
+                            <li class="inner-menu-item"><a href="./service.html?service=faq">자주하는 질문</a></li>
+                        </ul>
+                    </li>
+                    <li class="outer-menu-item">
+                        <span class="menu-title">로그인</span>
+                        <ul class="inner-menu">
+                            <li class="inner-menu-item"><a href="./login.html">로그인</a></li>
+                            <li class="inner-menu-item"><a href="#">회원가입</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <hr id="nav-line">
+        <section>
+            <article class="product_imgs">
+                <img id="product_img" src="./img/smartphone/galaxy_s21.jpg">
+            </article>
+            <article class="option">
+                <div class="content">
+                    <h2 id="product_name">갤럭시 S21 Ultra 5G 자급제</h2>
+                    <h5 id="product_code" style="color: rgb(73, 73, 73);">SM-G998NZKEKOO</h5>
+                    <div style="display: flex; height: 40; margin-top: 25px;">
+                        <p id="price_text">판매가 : </p>
+                        <h3 id="saleprice">1,190,000원</h3>
+                        <p id="price">1,250,000원</p>
+                    </div>
+                    <div class="select_optton">
+                        <ul>
+                            <li><p>색상 : </p>
+                                <select id="color_selection">
+                                    <optgroup label="색상">
+                                        <option value="WHITE">화이트</option>
+                                        <option value="BLACK">블랙</option>
+                                        <option value="BLUE">블루</option>
+                                    </optgroup>
+                                </select></li>
+                            <li><p>메모리 : </p>
+                                <select id="memory_selection">
+                                    <optgroup label="메모리">
+                                        <option value="128GB">128GB</option>
+                                        <option value="256GB">256GB</option>
+                                        <option value="512GB">512GB</option>
+                                    </optgroup>
+                                </select></li>
+                            <li><p>수량 : </p>
+                                <div class="quantity">
+                                    <ul>
+                                        <li><button onclick="quantityDown_Btn()" style="border-radius: 15px 0px 0px 15px;">-</button></li>
+                                        <li><input id="quantity_selection" type="text" value="1"></li>
+                                        <li><button onclick="quantityUp_Btn()" style="border-radius: 0px 15px 15px 0px;">+</button></li>
+                                    </ul>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="buy_option">
+                        <ul>
+                            <li><a href="">장바구니</a></li>
+                            <li>
+                                <form method="post" name="order_form" action="./order.html" style="display: none;">
+                                    <input type="text" name="product-name">
+                                    <input type="text" name="product-color">
+                                    <input type="text" name="product-memory">
+                                    <input type="text" name="product-quantity">
+                                </form>
+                                <button id="now_buy" onclick="now_buyOnClick()"style="font-size: 1.1rem;">바로구매</button></li>
+                        </ul>
+                        <br><br>
+                        <a href="" id="reservation">상담예약하기</a>
+                    </div>
+                </div>
+            </article>
+        </section>
+        <hr id="middle_hr">
+        <div>
+            <img id="main_img" src="" alt="상세정보">
+        </div>
+        <script src="./js/product-info.js"></script>        
+    </body>
+</html>

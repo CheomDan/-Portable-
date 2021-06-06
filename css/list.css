@@ -1,0 +1,85 @@
+#lnb {
+    margin: 0;
+    padding: 50px 20px;
+    position: relative;
+    width: 200px;
+}
+#lnb > ul > li ul {display: none;}
+#lnb > ul > li > a {
+    display: block;
+    padding: 14px 35px 14px 15px;
+    color: inherit;
+    font-size: 14px;
+    background:#f5f2ec url(https://t1.daumcdn.net/cfile/tistory/2417E04D570C5C0225) no-repeat 95% 15px;
+}
+#lnb > ul > li.on > a {background: #f5f2ec url('https://t1.daumcdn.net/cfile/tistory/257B794F570C5C0D1A') no-repeat 95% 14px;}
+#lnb > ul > li > ul > li > button{
+    background-color: rgb(250, 250, 250);
+    font-size: 13px;
+    height: 30px;
+    width: 200px;
+    border:none;
+}
+#lnb > ul > li > ul > li > button:hover{
+    color: orange;
+}
+#lnb > ul > li > ul > li > button:active{
+    color: white;
+    background-color: rgb(250, 223, 173);
+}
+/*목록기본세팅*/
+div{
+    float: left;
+}
+section{
+    margin-left: 100px;
+    margin-top: 4em;
+}
+section div div{padding: 5px 15px;box-shadow: 4px 4px 5px 6px rgb(245, 245, 245)}
+section div div{
+    margin: 10px;
+    height: 500px;
+    width: 280px;
+    border-radius: 15px;
+}
+section ul li {float: left;}
+section ul div div ul li {font-size: 12px;color: rgb(58, 58, 58);}
+section ul div div h2 p{
+    display: inline;
+    font-size: 16px;
+    color: rgb(88, 88, 88);
+    padding-left: 5px;
+    text-decoration: line-through;
+}
+section ul div div a {
+    font-size: 15px;
+    display: table; margin-left: auto; margin-right: auto;
+    text-align: center;
+    margin-top: 30px;
+    padding: 7px 15px;
+    border: 1px solid rgb(107, 106, 106);
+    font-weight: 900;
+    border-radius: 15px;
+    width: 120px;
+}section ul div div a:hover{
+    color: white;
+    border:none;
+    background-color: orange;
+}
+
+@media (max-width:400px) {
+    #lnb {
+        width: 350px;
+        padding: 0;
+        padding-top:10px;
+        padding-left: 10px;
+        padding-bottom: 10px;
+    }
+    #lnb > ul > li > ul > li > button{
+        width: 100%;
+    }
+    section{
+        margin-top: 5px;
+        margin-left: 20px;
+    }
+}

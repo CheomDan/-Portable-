@@ -1,0 +1,135 @@
+<html>
+    <head>
+        <title>Portable유통 - 로그인</title>
+        <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0">
+        <link href="./css/main-header.css" rel="stylesheet">
+        <link href="./css/main-nav.css" rel="stylesheet"> 
+        <link href="./css/main-footer.css" rel="stylesheet">
+        <link href="./css/login.css" rel="stylesheet">
+        <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+        <script>
+            var hr = document.getElementById('nav-line');
+            $(document).ready(function () {
+                $('.outer-menu-item').hover(function () {
+                    $('#nav-line').css('margin-top','95px');
+                    $(this).find('.inner-menu').show();
+                }, function () {
+                    $('#nav-line').css('margin-top','10px');
+                    $(this).find('.inner-menu').hide();
+                });
+            });
+        </script> 
+    </head>
+    <body>
+        <header>
+            <div id="header-left">
+                <a href="./index.html"><img src="img/logo.png" alt="Portable유통" width="180px" height="70px"></a>
+            </div>
+            <div id="header-right">
+                <form>
+                    <input id="search-input" type="text"/>
+                    <input id="search-submit" type="image" src="img/searchicon.png" value="submit"/>
+                </form>
+            </div>
+        </header>
+        <nav>
+            <div class="pull-left">
+                <ul class="outer-menu">
+                    <li class="outer-menu-item">
+                        <span class="menu-title">회사소개</span>
+                        <ul class="inner-menu">
+                            <li class="inner-menu-item"><a href="./info.html?info_item=info">회사소개</a></li>
+                            <li class="inner-menu-item"><a href="./info.html?info_item=history">회사연혁</a></li>
+                            <li class="inner-menu-item"><a href="./info.html?info_item=CEO">CEO인사말</a></li>
+                        </ul>
+                    </li>
+                    <li class="outer-menu-item">
+                        <span class="menu-title">채용정보</span>
+                        <ul class="inner-menu">
+                            <li class="inner-menu-item"><a href="./careers.html">채용공고</a></li>
+                            <li class="inner-menu-item"><a href="./careers.html">채용문의</a></li>
+                        </ul>
+                    </li>
+                    <li class="outer-menu-item">
+                        <span class="menu-title">제품정보</span>
+                        <ul class="inner-menu">
+                            <li class="inner-menu-item"><a href="./list.html?list=smartphone">스마트폰</a></li>
+                            <li class="inner-menu-item"><a href="./list.html?list=tablet">테블릿</a></li>
+                            <li class="inner-menu-item"><a href="./list.html?list=notebook">노트북</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <div class="pull-center">
+                <a href="https://www.samsung.com/"><span class="menu-title" style="color: blue;font-weight: 1000;font-size: 27px;">SAMSUNG</span></a>
+                <a href="https://www.lge.co.kr/"><span class="menu-title" style="color: rgb(200, 5, 168);font-weight: 1000;;font-size: 27px;">LG</span></a>
+            </div>
+            <div class="pull-right">
+                <ul class="outer-menu">
+                    <li class="outer-menu-item">
+                        <span class="menu-title">고객지원</span>
+                        <ul class="inner-menu">
+                            <li class="inner-menu-item"><a href="./service.html?service=as">A/S서비스</a></li>
+                            <li class="inner-menu-item"><a href="./service.html?service=faq">자주하는 질문</a></li>
+                        </ul>
+                    </li>
+                    <li class="outer-menu-item">
+                        <span class="menu-title">로그인</span>
+                        <ul class="inner-menu">
+                            <li class="inner-menu-item"><a href="./login.html">로그인</a></li>
+                            <li class="inner-menu-item"><a href="#">회원가입</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <hr id="nav-line">
+
+        <div id="background_div">
+            <section>
+                <div class="login_div">
+                    <h1>(주)Portable유통 로그인</h1>
+                    <ul>
+                        <li><input type="text" id="User_email" placeholder="이메일주소"></li>
+                        <li><input type="text" id="User_pw" placeholder="비밀번호"></li>
+                    </ul>
+                    <button>로그인</button>
+                    <ul id="register_ul">
+                        <li><a href="">ID 찾기 또는 비밀번호 변경</a></li>
+                        <li><a href="">아직 회원이 아니신가요?</a></li>
+                    </ul>
+                </div>
+            </section>
+        </div>
+        <footer>
+            <div class="footer_list">
+                <a href="#"><span>회사소개</span></a>
+                <p>|</p>
+                <a href="#"><span>개인정보처리방침</span></a>
+                <p>|</p>
+                <a href="#"><span>이메일 무단수집거부</span></a>
+                <p>|</p>
+                <a href="#"><span>법적고지</span></a>
+            </div>
+            <div class="info">
+                <div id="info1">
+                    <span>광주광역시 00구 00000로 000번길 00 (00동)</span>
+                    <p>|</p>
+                    <span>대표이사 000</span>
+                </div>
+                <div id="info2">
+                    <p>|</p>
+                    <span>사업자 등록번호 000-00-00000</span>
+                    <p>|</p>
+                    <span>대표변호 062) 000-0000</span>
+                </div>
+            </div>
+            <div class="copyright">
+                <img src="./img/white_logo.png" width="150px">
+                <span>본 사이트의 콘텐츠는 저작권법의 보호를 받는바, 무단 전재, 복사, 배포 등을 금합니다<br></span>
+                <span style="float: right;;">Cospyright© 2021 Portable유통. All Rights Reserved</span>
+            </div>
+        </footer>
+    </body>
+</html>

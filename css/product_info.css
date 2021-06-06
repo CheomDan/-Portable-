@@ -1,0 +1,150 @@
+section {
+    padding: 20px 40px;
+    display: flex;
+    width: 100%;
+    background-color: rgb(245, 245, 245);
+}
+#price_text{
+    margin-right: 40px;
+    line-height: 30px;
+    font-size: 12px;
+}
+#price{
+    line-height: 35px;
+    display: inline;
+    font-size: 14px;
+    color: rgb(88, 88, 88);
+    padding-left: 5px;
+    text-decoration: line-through;
+}
+.product_imgs{
+    margin-top: 110px;
+    margin-left: 350px;
+}
+.option {
+    margin-top: 80px;
+    background-color: white;
+    margin-left: 450px;
+    height: 550px;
+    width: 400px;
+    padding: 5px 15px;
+    box-shadow: 2px 2px 10px 5px rgb(255, 227, 175);
+    border-radius: 15px;
+}
+.content {
+    padding: 10px 20px;
+}
+/*옵션칸 세팅*/
+.select_optton {
+    padding: 25px;
+    border-radius: 20px;
+    background-color: rgb(240, 236, 236);
+    height: 150px;
+}
+.select_optton ul li {
+    margin-top: 8px;
+    height: 40px;
+    display: flex;
+}
+.select_optton  ul li p {
+    line-height: 40px;
+    font-weight: 900;
+    font-size: 14px;
+}
+/*메모리 옵션*/
+#color_selection{
+    padding: 10px;
+    background-color: rgb(240, 236, 236);
+    border:none;
+    height: 40px;
+}
+#memory_selection{
+    padding: 10px;
+    background-color: rgb(240, 236, 236);
+    border:none;
+    height: 40px;
+}
+/*수량 옵션*/
+.quantity {
+    height: 25px;
+}
+.quantity ul {
+    margin-left: 10px;
+}
+.quantity ul li {
+    float: left;
+    height: 25px;
+}
+.quantity ul li input{
+    text-align: center;
+    background-color: white;
+    width: 35px;
+    border: 1px solid gray;
+}
+.quantity ul li button {
+    border: 1px solid gray;
+    font-size: 15px;
+    width: 35px;
+    background-color: white;
+}
+.quantity ul li button:active{
+    background-color: rgb(216, 216, 216);
+}
+/*색상 옵션*/
+#color_selection{
+    padding: 10px;
+    background-color: rgb(240, 236, 236);
+    border:none;
+    height: 40px;
+}
+/*구매 옵션*/
+.buy_option {margin-top: 20px;}
+.buy_option ul li{
+    display: flex;
+    padding-left: 15px;
+    float: left;
+}
+.buy_option ul li button, .buy_option ul li a{
+    padding: 7px 45px;
+    border-radius: 20px;
+    border: 1px solid rgb(85, 85, 85);
+}
+#now_buy{
+    background-color: orange;border: none; color: white;
+}
+#reservation{text-decoration: underline;margin-left: 130px;}
+#middle_hr{
+    background-color: rgb(46, 46, 46);
+    height: 100px;
+}
+/*메인 이미지 중앙정렬*/
+#main_img {
+    display: table; margin-left: auto; margin-right: auto;
+}
+
+@media (max-width: 400px) {
+    section {
+        padding: 0;
+        display: block;
+    }
+    .product_imgs{
+        margin-top: 20px;
+        margin-left: 0px;
+    }
+    .option{margin-left: 0;margin-left:5px;width: 315px;height: auto;}
+    .select_optton {
+        padding: 5px;
+    }
+    #main_img {
+        width: 100%;
+    }
+    .main_img_setting{width: 100%;}
+    .buy_option ul li a{
+        text-align: center;
+        margin:0;
+        margin-top: 10px;
+        width: 170px;
+    }
+    #reservation{margin-left: 100px;}
+    #product_img{width: 100%;}
+}

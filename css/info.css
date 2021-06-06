@@ -1,0 +1,61 @@
+/*좌측 aside*/
+.select_Bar{
+    position: sticky;
+    top: 150;
+    margin-top: 100px;
+    float: left;
+}
+.select_Bar > div > ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    width: 200px;
+    background-color: #f1f1f1;
+}
+.active {
+    background-color: rgb(255, 201, 101);
+    color: white;
+}
+.select_Bar > div > ul > li > button{
+    text-align: left;
+    width: 200px;
+    border: none;
+    padding: 3px;
+    font-size: 19px;
+}
+.select_Bar > div > ul > li > a:hover{
+    background-color: rgb(246, 175, 43);
+}
+.select_Bar > div > ul > li > a:active {
+    color: white;
+}
+section{
+    height: 660px;
+}
+/*회사소개*/
+#company_info{padding-left: 300px;padding-top:70px;display: block;}
+#company_info h2 {color:orange}
+#company_info p{font-size: 18px;color: rgb(66, 66, 66);}
+/*회사연혁*/
+#company_history {padding-left: 300px;padding-top:70px; display: none;}
+#company_history h2 {color:orange}
+#company_history div div {padding-top: 25px;}
+#company_history div div h3{float:left;width: 65px;height: 60px;font-size: 27px;padding: 5px 15px;}
+#company_history div div ul li {padding: 3px;border-left: 1px solid black;font-size: 15px;color: rgb(65, 65, 65);}
+/*CEO 인사말*/
+#company_CEO {padding-left: 300px;padding-top:70px;display: none;}
+#company_CEO h2 {color:orange}
+#company_CEO img {float: left;}
+#info_p{
+    font-weight: 900;
+    font-size: 13px;
+    color: rgb(75, 74, 74);
+    padding: 17px 0;
+}
+
+@media (max-width: 400px) {
+    .select_Bar{display: none;}
+    #company_info, #company_history, #company_CEO {padding: 10px;}
+    #company_info p{font-size: 15px;color: rgb(66, 66, 66);}
+    #company_CEO img {float: none;}
+}

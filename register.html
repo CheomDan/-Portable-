@@ -1,73 +1,195 @@
 <html>
     <head>
         <title>Portable유통 - 회원가입</title>
-        <style>
-            /*초기화*/
-            *{
-                margin:0px;
-                padding:0px;
-                font-family: '맑은 고딕','Malgun Gothic','Gothic', sans-serif;
-            }
-            a{text-decoration: none;color: black;}
-            li{list-style: none;}
-            body{min-width: 1400px;background-color: #f2f2f2;}
-            /* header */
-            .header {width: 945px;margin:0 auto;position: relative;margin-bottom: 10px;padding-top: 30px;}
-            .container {text-align: center;}
-            .container::after {display: block;content:"";clear: both;}
-            .language {position:absolute; top:20px; right:130px;}
-            /* checkBox */
-            .section label {font-size: 1.2rem;font-weight: 600;}
-            .agree1, .agree2, .marketing {width: 530px;margin: 0 auto;}
-            .section label p {font-size: 0.9rem;font-weight: 300;}
-            .terms_necessary {font-size: 12px;font-weight: 400;color: #db8f01;}
-            .container div {margin-top: 35px;}
-        </style>
-        <script>
-            //checkBox Setting
-            function check(name) {
-                if(document.getElementById(name).getAttribute('src') == "./img/check_off.png") {
-                    document.getElementById(name).src = './img/check_on.png';
-                } else if(document.getElementById(name).getAttribute('src') == "./img/check_on.png") {
-                    document.getElementById(name).src = './img/check_off.png';
-                }
-            }
-        </script>
+        <link href="./css/main-footer.css" rel="stylesheet">
+        <link href="./css/register.css" rel="stylesheet">
     </head>
     <body>
         <header class="header">
             <div class="container">
-                <img src="./img/logo.png" alt="로고" width="350">
+                <a href="./index.html">
+                    <img src="./img/logo.png" alt="로고" width="350">
+                </a>
                 <select class="language">
                     <option value="Korean">한국어</option>
                     <option value="English">영어</option>
                 </select>
             </div>
         </header>
-        <secetion class="section">
-            <div class="container">
-                <div class="agree1">
-                    <label for="termsService">
-                        <img id="checkBox1" src="./img/check_off.png" onclick="check('checkBox1')">Portable유통 이용약관 동의<span class="terms_necessary">(필수)</span>
-                        <div style="overflow:scroll; width:420px; height:120px;background-color: white;border: 1px solid gray;margin:0 auto;">
-                            <p>Portable유통 이용약관 동의 관련 내용</p>
+        <div id="oneLayout">
+            <secetion class="section">
+                <div class="container">
+                    <div class="agree1">
+                        <label for="termsService">
+                            <img id="checkBox1" src="./img/check_off.png" onclick="check('checkBox1')">Portable유통 이용약관 동의<span class="terms_necessary">(필수)</span>
+                            <div style="overflow:scroll; width:420px; height:120px;background-color: white;border: 1px solid gray;margin:0 auto;">
+                                <p>Portable유통 이용약관 동의 관련 내용</p>
+                            </div>
+                        </label>
+                    </div>
+                    <div class="agree2">
+                        <label for="termsService">
+                            <img id="checkBox2" src="./img/check_off.png" onclick="check('checkBox2')">개인정보 수집 및 이용 동의<span class="terms_necessary">(필수)</span>
+                            <iframe src="./privacy.html" frameborder="0" style="overflow:scroll; width:420px; height:120px;background-color: white;border: 1px solid gray;margin:0 auto;"></iframe>
+                        </label>
+                    </div>
+                    <div class="marketing">
+                        <label for="termsService">
+                            <img id="checkBox3" src="./img/check_off.png" onclick="check('checkBox3')">프로모션 정보 수신 동의<span class="terms_necessary">(선택)</span>
+                            <p>Portable유통에서 제공하는 이벤트/혜택 등 다양한 정보를 휴대전화(이메일 또는 문자)로 받아보실 수 있습니다. 일부 서비스의 경우, 개별 서비스에 대해 별도 수신 동의를 받을 수 있으며, 이때에도 수신 동의에 대해 별도로 안내하고 동의를 받습니다.</p>
+                        </label>
+                    </div>
+                    <div class="button">
+                        <a id="cancel" href="./index.html">취소</a>
+                        <button id="next" type="button"onclick="next()">다음</button>
+                    </div>
+                </secetion>
+                </div>
+        </div>
+        <div id="twoLayout" style="display: none;">
+            <div id="wrapper">
+                <!-- content-->
+                <div id="content">
+                    <!-- ID -->
+                    <div>
+                        <h3 class="join_title">
+                            <label for="id">아이디</label>
+                        </h3>
+                        <span class="box int_id">
+                            <input type="text" id="id" class="int" maxlength="20">
+                        </span>
+                        <span class="error_next_box"></span>
+                    </div>
+                    <!-- PW1 -->
+                    <div>
+                        <h3 class="join_title"><label for="pswd1">비밀번호</label></h3>
+                        <span class="box int_pass">
+                            <input type="text" id="pswd1" class="int" maxlength="20">
+                            <span id="alertTxt">사용불가</span>
+                        </span>
+                        <span class="error_next_box"></span>
+                    </div>
+                    <!-- PW2 -->
+                    <div>
+                        <h3 class="join_title"><label for="pswd2">비밀번호 재확인</label></h3>
+                        <span class="box int_pass_check">
+                            <input type="text" id="pswd2" class="int" maxlength="20">
+                        </span>
+                        <span class="error_next_box"></span>
+                    </div>
+                    <!-- NAME -->
+                    <div>
+                        <h3 class="join_title"><label for="name">이름</label></h3>
+                        <span class="box int_name">
+                            <input type="text" id="name" class="int" maxlength="20">
+                        </span>
+                        <span class="error_next_box"></span>
+                    </div>
+                    <!-- BIRTH -->
+                    <div>
+                        <h3 class="join_title"><label for="yy">생년월일</label></h3>
+                        <div id="bir_wrap">
+                            <!-- BIRTH_YY -->
+                            <div id="bir_yy">
+                                <span class="box">
+                                    <input type="text" id="yy" class="int" maxlength="4" placeholder="년(4자)">
+                                </span>
+                            </div>
+                            <!-- BIRTH_MM -->
+                            <div id="bir_mm">
+                                <span class="box">
+                                    <select class="twoSelect" id="mm" class="sel">
+                                        <option>월</option>
+                                        <option value="01">1</option>
+                                        <option value="02">2</option>
+                                        <option value="03">3</option>
+                                        <option value="04">4</option>
+                                        <option value="05">5</option>
+                                        <option value="06">6</option>
+                                        <option value="07">7</option>
+                                        <option value="08">8</option>
+                                        <option value="09">9</option>                                    
+                                        <option value="10">10</option>
+                                        <option value="11">11</option>
+                                        <option value="12">12</option>
+                                    </select>
+                                </span>
+                            </div>
+                            <!-- BIRTH_DD -->
+                            <div id="bir_dd">
+                                <span class="box">
+                                    <input type="text" id="dd" class="int" maxlength="2" placeholder="일">
+                                </span>
+                            </div>
                         </div>
-                    </label>
-                </div>
-                <div class="agree2">
-                    <label for="termsService">
-                        <img id="checkBox2" src="./img/check_off.png" onclick="check('checkBox2')">개인정보 수집 및 이용 동의<span class="terms_necessary">(필수)</span>
-                        <iframe src="./privacy.html" frameborder="0" style="overflow:scroll; width:420px; height:120px;background-color: white;border: 1px solid gray;margin:0 auto;"></iframe>
-                    </label>
-                </div>
-                <div class="marketing">
-                    <label for="termsService">
-                        <img id="checkBox3" src="./img/check_off.png" onclick="check('checkBox3')">프로모션 정보 수신 동의<span class="terms_necessary">(선택)</span>
-                        <p>Portable유통에서 제공하는 이벤트/혜택 등 다양한 정보를 휴대전화(이메일 또는 문자)로 받아보실 수 있습니다. 일부 서비스의 경우, 개별 서비스에 대해 별도 수신 동의를 받을 수 있으며, 이때에도 수신 동의에 대해 별도로 안내하고 동의를 받습니다.</p>
-                    </label>
-                </div>
-            </secetion>
+                        <span class="error_next_box"></span>    
+                    </div>
+                    <!-- GENDER -->
+                    <div>
+                        <h3 class="join_title"><label for="gender">성별</label></h3>
+                        <span class="box gender_code">
+                            <select class="twoSelect" id="gender" class="sel">
+                                <option>성별</option>
+                                <option value="M">남자</option>
+                                <option value="F">여자</option>
+                            </select>                            
+                        </span>
+                        <span class="error_next_box">필수 정보입니다.</span>
+                    </div>
+                    <!-- EMAIL -->
+                    <div>
+                        <h3 class="join_title"><label for="email">본인확인 이메일<span class="optional">(선택)</span></label></h3>
+                        <span class="box int_email">
+                            <input type="text" id="email" class="int" maxlength="100" placeholder="선택입력">
+                        </span>
+                        <span class="error_next_box">이메일 주소를 다시 확인해주세요.</span>    
+                    </div>
+                    <!-- MOBILE -->
+                    <div>
+                        <h3 class="join_title"><label for="phoneNo">휴대전화</label></h3>
+                        <span class="box int_mobile">
+                            <input type="tel" id="mobile" class="int" maxlength="16" placeholder="전화번호 입력">
+                        </span>
+                        <span class="error_next_box"></span>    
+                    </div>
+                    <div class="btn_area">
+                        <button type="button" id="btnJoin">
+                            <span>가입하기</span>
+                        </button>
+                    </div>
+                </div> 
+            </div> 
+        <script src="main.js"></script>
+        </div>
+        <footer>
+            <div class="footer_list">
+                <a href="#"><span>회사소개</span></a>
+                <p>|</p>
+                <a href="#"><span>개인정보처리방침</span></a>
+                <p>|</p>
+                <a href="#"><span>이메일 무단수집거부</span></a>
+                <p>|</p>
+                <a href="#"><span>법적고지</span></a>
             </div>
-        <footer class="footer"></footer>
+            <div class="info">
+                <div id="info1">
+                    <span>광주광역시 00구 00000로 000번길 00 (00동)</span>
+                    <p>|</p>
+                    <span>대표이사 000</span>
+                </div>
+                <div id="info2">
+                    <p>|</p>
+                    <span>사업자 등록번호 000-00-00000</span>
+                    <p>|</p>
+                    <span>대표변호 062) 000-0000</span>
+                </div>
+            </div>
+            <div class="copyright">
+                <img src="./img/white_logo.png" width="150px">
+                <span>본 사이트의 콘텐츠는 저작권법의 보호를 받는바, 무단 전재, 복사, 배포 등을 금합니다<br></span>
+                <span style="float: right;;">Cospyright© 2021 Portable유통. All Rights Reserved</span>
+            </div>
+        </footer>
+        <script src="./js/register.js"></script>
     </body>
 </html>

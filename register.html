@@ -1,0 +1,73 @@
+<html>
+    <head>
+        <title>Portable유통 - 회원가입</title>
+        <style>
+            /*초기화*/
+            *{
+                margin:0px;
+                padding:0px;
+                font-family: '맑은 고딕','Malgun Gothic','Gothic', sans-serif;
+            }
+            a{text-decoration: none;color: black;}
+            li{list-style: none;}
+            body{min-width: 1400px;background-color: #f2f2f2;}
+            /* header */
+            .header {width: 945px;margin:0 auto;position: relative;margin-bottom: 10px;padding-top: 30px;}
+            .container {text-align: center;}
+            .container::after {display: block;content:"";clear: both;}
+            .language {position:absolute; top:20px; right:130px;}
+            /* checkBox */
+            .section label {font-size: 1.2rem;font-weight: 600;}
+            .agree1, .agree2, .marketing {width: 530px;margin: 0 auto;}
+            .section label p {font-size: 0.9rem;font-weight: 300;}
+            .terms_necessary {font-size: 12px;font-weight: 400;color: #db8f01;}
+            .container div {margin-top: 35px;}
+        </style>
+        <script>
+            //checkBox Setting
+            function check(name) {
+                if(document.getElementById(name).getAttribute('src') == "./img/check_off.png") {
+                    document.getElementById(name).src = './img/check_on.png';
+                } else if(document.getElementById(name).getAttribute('src') == "./img/check_on.png") {
+                    document.getElementById(name).src = './img/check_off.png';
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <header class="header">
+            <div class="container">
+                <img src="./img/logo.png" alt="로고" width="350">
+                <select class="language">
+                    <option value="Korean">한국어</option>
+                    <option value="English">영어</option>
+                </select>
+            </div>
+        </header>
+        <secetion class="section">
+            <div class="container">
+                <div class="agree1">
+                    <label for="termsService">
+                        <img id="checkBox1" src="./img/check_off.png" onclick="check('checkBox1')">Portable유통 이용약관 동의<span class="terms_necessary">(필수)</span>
+                        <div style="overflow:scroll; width:420px; height:120px;background-color: white;border: 1px solid gray;margin:0 auto;">
+                            <p>Portable유통 이용약관 동의 관련 내용</p>
+                        </div>
+                    </label>
+                </div>
+                <div class="agree2">
+                    <label for="termsService">
+                        <img id="checkBox2" src="./img/check_off.png" onclick="check('checkBox2')">개인정보 수집 및 이용 동의<span class="terms_necessary">(필수)</span>
+                        <iframe src="./privacy.html" frameborder="0" style="overflow:scroll; width:420px; height:120px;background-color: white;border: 1px solid gray;margin:0 auto;"></iframe>
+                    </label>
+                </div>
+                <div class="marketing">
+                    <label for="termsService">
+                        <img id="checkBox3" src="./img/check_off.png" onclick="check('checkBox3')">프로모션 정보 수신 동의<span class="terms_necessary">(선택)</span>
+                        <p>Portable유통에서 제공하는 이벤트/혜택 등 다양한 정보를 휴대전화(이메일 또는 문자)로 받아보실 수 있습니다. 일부 서비스의 경우, 개별 서비스에 대해 별도 수신 동의를 받을 수 있으며, 이때에도 수신 동의에 대해 별도로 안내하고 동의를 받습니다.</p>
+                    </label>
+                </div>
+            </secetion>
+            </div>
+        <footer class="footer"></footer>
+    </body>
+</html>
